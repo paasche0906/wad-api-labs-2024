@@ -8,6 +8,7 @@ const TaskSchema = new Schema({
     deadline: Date,
     done: Boolean,
     priority: { type: String, enum: ["low", "medium", "high"] },
+    userId: { type: Schema.Types.ObjectId, ref: 'User' }, 
     created_at: Date,
     updated_at: Date
 });
